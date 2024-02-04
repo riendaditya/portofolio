@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <div class="logo">MyPorto</div>
+            <div class="menu-toggle active">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu-toggle2">
+                <i class="fas fa-close"></i>
+            </div>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="header-text">
+                <h1>Hello,<br> I'm <span> Muhammad Riend Aditya</span> <br> From Indonesia</h1>
+                <p>Front End Developer</p>
+            </div>
+            <div class="social-icons1">
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="asset/img/profilel.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hello, let me introduce myself. I'm <span>Muhammad Riend Aditya</span>, a graduate in
+                        Informatics
+                        from Gunadarma University. <br>I am passionate about front-end development and UI/UX design.
+                        Throughoutmy studies, I have honed my skills in the design and development of websites and
+                        mobile applications.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('educations')">Educations</p>
+                    </div>
+                    <div class="tab-contents active-con" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Web/app design</li>
+                            <li><span>Web Development</span><br>Creating websites</li>
+                            <li><span>App Development</span><br>Building mobile applications</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>Developed a website for the Tema Gunadarma organization</li>
+                            <li><span>2022</span><br>Created a website for the company Birentcar</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="educations">
+                        <ul>
+                            <li><span>2019 - 2023</span><br>Informatics - Gunadarma University, GPA 3.72</li>
+                            <li><span>2016 - 2019</span><br>SMA 13 KOTA BEKASI</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Developer</h2>
+                    <p>As a Front End Developer, I specialize in crafting engaging and responsive user interfaces. My
+                        focus is on writing clean and efficient code to bring designs to life. I am experienced in
+                        creating seamless and visually appealing websites that enhance the user experience.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>With a background in UI/UX design, I bring a user-centered approach to every project. I create
+                        intuitive and visually pleasing designs that prioritize user satisfaction. My goal is to deliver
+                        a seamless and enjoyable experience for users across various digital platforms.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-mobile-screen"></i>
+                    <h2>Mobile Developer</h2>
+                    <p>As a Mobile App Developer, I specialize in building innovative and user-friendly mobile
+                        applications. From concept to implementation, I focus on creating robust and scalable solutions.
+                        My expertise lies in delivering high-quality apps that meet the unique needs of mobile users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work active" data-title="Website Rentcar" data-description="Dynamic website built with HTML, CSS, and JavaScript. Utilizes CodeIgniter 3 (CI3) framework
+                        for backend development and MySQL database for vehicle management.">
+                    <img src="asset/img/rental.png" alt="Website Rentcar">
+                </div>
+                <div class="work" data-title="Website Tema" data-description="Robust web application developed entirely with CodeIgniter 3 (CI3) framework, integrating
+                        HTML, CSS, JavaScript, and PHP. Implements MVC architecture for efficient data handling and
+                        CRUD operations">
+                    <img src="asset/img/Tema.png" alt="Website Tema">
+                </div>
+                <div class="work" data-title="Web Cafe"
+                    data-description="Simple website designed with HTML, CSS, and minimal JavaScript for interactivity.">
+                    <img src="asset/img/cafe.png" alt="Web cafe">
+                </div>
+            </div>
+            <button class="btn" onclick="showAlert()">See more</button>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="#" alt="" class="modal-image">
+            <div class="layer">
+                <h3 id="modalTitle">Title</h3>
+                <p id="modalDescription">Description</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>riendaditya14@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+62 812-1116-0550</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="asset\doc\CV_Muhammad Riend Aditya.pdf" class="btn">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="message" id="" cols="30" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Riend Aditya 2024</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-links");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-con");
+            }
+
+            event.currentTarget.classList.add("active-links");
+            document.getElementById(tabname).classList.add("active-con");
+        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menuToggle2 = document.querySelector('.menu-toggle2');
+            const navLinks = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function () {
+                menuToggle.classList.remove('active');
+                // Tambahkan kelas active ke menu-toggle
+                menuToggle2.classList.add('active');
+                // Toggle kelas active pada menu navLinks
+                navLinks.classList.toggle('active');
+            });
+
+            menuToggle2.addEventListener('click', function () {
+                // Hilangkan kelas active dari menu-toggle2
+                menuToggle2.classList.remove('active');
+                // Tambahkan kelas active ke menu-toggle
+                menuToggle.classList.add('active');
+                // Toggle kelas active pada menu navLinks
+                navLinks.classList.toggle('active');
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("myModal");
+            const modalImage = document.getElementById("modalImage");
+            const modalTitle = document.getElementById("modalTitle");
+            const modalDescription = document.getElementById("modalDescription");
+            const closeBtn = document.querySelector(".close");
+            const workList = document.querySelector(".work-list");
+
+            workList.addEventListener("click", function (event) {
+                const clickedWork = event.target.closest(".work");
+                if (clickedWork) {
+                    const imageUrl = clickedWork.querySelector("img").src;
+                    const title = clickedWork.getAttribute("data-title");
+                    const description = clickedWork.getAttribute("data-description");
+
+                    modalImage.src = imageUrl;
+                    modalTitle.textContent = title;
+                    modalDescription.textContent = description;
+
+                    modal.style.display = "block";
+                }
+            });
+
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+
+        function customAlert(message) {
+            // Create a new div element
+            var alertBox = document.createElement("div");
+
+            // Add styles to the alert box
+            alertBox.style.position = "fixed";
+            alertBox.style.top = "50%";
+            alertBox.style.left = "50%";
+            alertBox.style.transform = "translate(-50%, -50%)";
+            alertBox.style.backgroundColor = "#fff";
+            alertBox.style.border = "1px solid #000";
+            alertBox.style.padding = "20px";
+            alertBox.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
+
+            // Add the message to the alert box
+            alertBox.innerHTML = message;
+
+            // Append the alert box to the body
+            document.body.appendChild(alertBox);
+
+            // Automatically remove the alert after 3 seconds
+            setTimeout(function () {
+                alertBox.remove();
+            }, 3000);
+        }
+
+        function showAlert() {
+            customAlert("Projects have not been added yet");
+        }
+
+    </script>
+</body>
+
+</html>
