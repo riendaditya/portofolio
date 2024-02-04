@@ -654,5 +654,21 @@ form .btn2 {
         border-radius: 6px;
 
     }
+    .modal-content {
+        flex-direction: column; /* Mengatur orientasi konten modal menjadi vertikal */
+        align-items: center; /* Pusatkan konten modal secara horizontal */
+    }
+
+    .modal-content img {
+        width: 80%; /* Sesuaikan lebar gambar */
+        max-width: 80%; /* Tetapkan lebar maksimum gambar */
+        margin-right: 0; /* Hapus margin kanan gambar */
+        margin-bottom: 20px; /* Beri jarak bawah antara gambar dan deskripsi */
+    }
+
+    .modal-content .layer {
+        width: 100%; /* Lebar layer 100% agar sesuai dengan lebar konten modal */
+        margin-top: 0; /* Hapus margin atas layer */
+    }
 
 }
